@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Nounours — Asso Phoenix 77</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/profile.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a class="logo" href="index.html">
+      <div class="logo-icon">
+        <img src="img/logo.png" alt="Logo de l'association Phoenix 77" />
+      </div>
+      <span class="logo-name">Asso Phoenix 77</span>
+    </a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="mission.html">Mission</a>
+      <a href="chat.html" class="active">Nos chats</a>
+      <a href="blog.html">Blog</a>
+      <a href="comportement.html">Comportement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <button class="btn-donate">Faire un don</button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-wrap">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+      <a href="chat.html">Galerie d'adoption</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+      <span>Noé</span>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <div class="profile-layout">
+
+      <!-- GALLERY -->
+      <div class="gallery-col">
+        <div class="main-photo">
+          <img id="main-img"
+            src="https://communication-animale-spirituelle.com/wp-content/uploads/elementor/thumbs/Noe3-scaled-qvednvnziuyymtogfpcrfghk1999oweaml9gkoiw6o.jpg"
+            alt="Noé — photo principale" />
+          <div class="main-photo-badge">Nouveau</div>
+          <button class="main-photo-fav" id="fav-btn" title="Ajouter aux favoris" onclick="toggleFav()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="thumbnails">
+          <div class="thumb active"
+            onclick="switchPhoto(this, 'https://communication-animale-spirituelle.com/wp-content/uploads/elementor/thumbs/Noe3-scaled-qvednvnziuyymtogfpcrfghk1999oweaml9gkoiw6o.jpg')">
+            <img
+              src="https://communication-animale-spirituelle.com/wp-content/uploads/elementor/thumbs/Noe3-scaled-qvednvnziuyymtogfpcrfghk1999oweaml9gkoiw6o.jpg"
+              alt="Noé 1" />
+          </div>
+          <div class="thumb"
+            onclick="switchPhoto(this, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg')">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg"
+              alt="Noé 2" />
+          </div>
+          <div class="thumb"
+            onclick="switchPhoto(this, 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/1200px-Kittyply_edit1.jpg')">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/1200px-Kittyply_edit1.jpg"
+              alt="Noé 3" />
+          </div>
+          <div class="thumb"
+            onclick="switchPhoto(this, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/White_cat.jpg/1200px-White_cat.jpg')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/White_cat.jpg/1200px-White_cat.jpg"
+              alt="Noé 4" />
+          </div>
+        </div>
+
+        <div class="info-ribbon">
+          <div class="ribbon-item">
+            <span class="ribbon-label">Âge</span>
+            <span class="ribbon-value">10 ans</span>
+          </div>
+          <div class="ribbon-item">
+            <span class="ribbon-label">Sexe</span>
+            <span class="ribbon-value">Mâle castré</span>
+          </div>
+          <div class="ribbon-item">
+            <span class="ribbon-label">Race</span>
+            <span class="ribbon-value">Européen</span>
+          </div>
+          <div class="ribbon-item">
+            <span class="ribbon-label">Robe</span>
+            <span class="ribbon-value">Tabby tigré</span>
+          </div>
+          <div class="ribbon-item">
+            <span class="ribbon-label">En accueil</span>
+            <span class="ribbon-value">Depuis mars 2024</span>
+          </div>
+          <div class="ribbon-item">
+            <span class="ribbon-label">Référence</span>
+            <span class="ribbon-value">#PHX-077</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DETAILS -->
+      <div class="details-col">
+
+        <div class="cat-header">
+          <div class="cat-tag-row">
+            <span class="cat-tag nouveau">Nouveau</span>
+            <span class="cat-tag male">Mâle</span>
+            <span class="cat-tag senior">Senior</span>
+          </div>
+          <h1 class="cat-name">Noé<br><em>le miraculé</em></h1>
+          <p class="cat-subtitle">10 ans · Européen tabby · Seine-et-Marne (77)</p>
+        </div>
+
+        <div class="story-card">
+          <h3>Son histoire</h3>
+          <p>Noé a été retrouvé dans un état critique après un accident de la route. Grâce aux soins intensifs de notre
+            équipe vétérinaire et à l'amour de sa famille d'accueil, il a réalisé un véritable miracle de guérison.</p>
+          <p>Aujourd'hui rétabli, ce grand gaillard au cœur tendre a redécouvert le goût de la vie. Il cherche un foyer
+            paisible où poser ses bagages définitivement et savourer chaque instant de cette seconde jeunesse qui lui
+            est offerte.</p>
+        </div>
+
+        <div class="traits-card">
+          <h3>Sa personnalité</h3>
+          <div class="traits-grid">
+            <div class="trait">
+              <div class="trait-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </div>
+              <span class="trait-text">Grand câlin</span>
+            </div>
+            <div class="trait">
+              <div class="trait-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" />
+                  <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                </svg>
+              </div>
+              <span class="trait-text">Adorateur du canapé</span>
+            </div>
+            <div class="trait">
+              <div class="trait-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+              </div>
+              <span class="trait-text">Calme et posé</span>
+            </div>
+            <div class="trait">
+              <div class="trait-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <span class="trait-text">Attaché à son humain</span>
+            </div>
+            <div class="trait">
+              <div class="trait-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
+              <span class="trait-text">Ronron de champion</span>
+            </div>
+            <div class="trait">
+              <div class="trait-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+              </div>
+              <span class="trait-text">Joueur à ses heures</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="compat-card">
+          <h3>Compatibilités</h3>
+          <div class="compat-list">
+            <div class="compat-item"><span class="compat-dot yes"></span>Adultes et personnes âgées — parfait</div>
+            <div class="compat-item"><span class="compat-dot maybe"></span>Enfants calmes (à partir de 10 ans)</div>
+            <div class="compat-item"><span class="compat-dot no"></span>Autres chats — déconseillé</div>
+            <div class="compat-item"><span class="compat-dot no"></span>Chiens — non compatible</div>
+            <div class="compat-item"><span class="compat-dot yes"></span>Appartement ou maison avec jardin</div>
+          </div>
+        </div>
+
+        <div class="health-card">
+          <h3>🩺 Suivi vétérinaire</h3>
+          <div class="health-checks">
+            <div class="health-check">
+              <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Vacciné (typhus, coryza, leucose)
+            </div>
+            <div class="health-check">
+              <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Castré
+            </div>
+            <div class="health-check">
+              <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Pucé et identificé
+            </div>
+            <div class="health-check">
+              <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Traitement antiparasitaire à jour
+            </div>
+            <div class="health-check">
+              <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></div>
+              Bilan sanguin OK — aucune pathologie
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-buttons">
+          <button class="btn-adopt">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            Déposer une demande d'adoption
+          </button>
+          <button class="btn-contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            Poser une question sur Noé
+          </button>
+          <button class="btn-share">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+            </svg>
+            Partager la fiche de Noé
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about-section">
+      <h2 class="section-title">Ce qu'il faut <em>savoir</em></h2>
+      <div class="about-grid">
+        <div class="about-block">
+          <div class="about-block-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <h4>Son environnement idéal</h4>
+          <p>Noé s'épanouit dans un intérieur calme et stable. Un appartement douillet lui convient parfaitement. Il
+            adore les perchoirs près des fenêtres pour observer le monde extérieur en toute sérénité.</p>
+        </div>
+        <div class="about-block">
+          <div class="about-block-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h4>Le processus d'adoption</h4>
+          <p>Après réception de votre dossier, notre référente vous contacte sous 48h. Une visite à domicile est
+            organisée, puis si tout se passe bien, Noé rejoint son foyer avec un suivi post-adoption de 3 mois.</p>
+        </div>
+        <div class="about-block">
+          <div class="about-block-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+          </div>
+          <h4>Conseils d'intégration</h4>
+          <p>Un chat senior a besoin de temps pour apprivoiser son nouvel espace. Prévoyez une pièce refuge au départ,
+            respectez son rythme et laissez-le venir vers vous. Noé s'attachera profondément une fois en confiance.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIMILAR CATS -->
+    <div class="similar-section">
+      <h2 class="section-title">D'autres chats <em>à découvrir</em></h2>
+      <div class="similar-grid">
+        <a class="mini-card" href="#">
+          <div class="mini-card-img">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg"
+              alt="Félix" />
+          </div>
+          <div class="mini-card-body">
+            <div class="mini-card-name">Félix</div>
+            <div class="mini-card-meta">8 ans · Mâle · Très câlin</div>
+          </div>
+        </a>
+        <a class="mini-card" href="#">
+          <div class="mini-card-img">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/1200px-Kittyply_edit1.jpg"
+              alt="Oscar" />
+          </div>
+          <div class="mini-card-body">
+            <div class="mini-card-name">Oscar</div>
+            <div class="mini-card-meta">3 ans · Mâle · Indépendant</div>
+          </div>
+        </a>
+        <a class="mini-card" href="#">
+          <div class="mini-card-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/White_cat.jpg/1200px-White_cat.jpg"
+              alt="Simba" />
+          </div>
+          <div class="mini-card-body">
+            <div class="mini-card-name">Simba</div>
+            <div class="mini-card-meta">5 ans · Mâle · Grand sensible</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <div class="cta">
+      <div class="cta-pattern"></div>
+      <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
+        <path
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg>
+      <h2>Vous ne trouvez pas votre compagnon&nbsp;?</h2>
+      <p>Inscrivez-vous à notre alerte adoption pour être prévenu dès qu'un nouveau chat arrive à l'association selon
+        vos critères.</p>
+      <div class="nl-form">
+        <input placeholder="Votre adresse email" type="email" />
+        <button>S'inscrire</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-brand-icon">
+              <div class="logo-icon">
+                <img src="img/logo.png" alt="Logo de l'association Phoenix 77" />
+              </div>
+            </div>
+            <span class="footer-brand-name">Asso Phoenix 77</span>
+          </div>
+          <p class="footer-desc">Association loi 1901 dédiée à la protection féline et à l'harmonie humain-chat en
+            Seine-et-Marne. Une approche basée sur la science du comportement.</p>
+          <div class="social-row">
+            <a class="social-btn" href="https://www.facebook.com/p/Phoenix-77-100065171363724/" title="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a class="social-btn" href="https://www.instagram.com/assophoenix77/" title="Instagram">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Association</h4>
+          <ul>
+            <li><a href="index.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="guide-adoption.html">Guide d'adoption</a></li>
+            <li><a href="veterinaires.html">Vétérinaires partenaires</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="chat.html">Nos chats à l'adoption</a></li>
+            <li><a href="comportement.html">Approche comportementale & communicative</a></li>
+            <li><a href="famille.html">Famille d'accueil</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Asso Phoenix 77. Tous droits réservés.</p>
+        <div class="footer-bottom-links">
+          <a href="legal.html">Mentions légales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/profile.js"></script>
+</body>
+
+</html>
